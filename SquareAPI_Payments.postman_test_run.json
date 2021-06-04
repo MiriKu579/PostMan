@@ -1,0 +1,422 @@
+{
+	"id": "4ba53710-4f7a-4237-bdfa-d4fe757faca7",
+	"name": "SquareAPI_Payments",
+	"timestamp": "2021-06-04T04:18:25.217Z",
+	"collection_id": "b9abc9ba-4c35-4d47-b139-0f44ee2f0b35",
+	"folder_id": 0,
+	"environment_id": "2ba806bd-b28d-4ac7-833d-0f14fec3ee21",
+	"totalPass": 35,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "8b8611b5-458c-4ae3-91d6-fe534d6f58c0",
+			"name": "CratePayment_CreditCard",
+			"url": "https://connect.squareupsandbox.com/v2/payments",
+			"time": 686,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"Validate Amount": true,
+				"Validate Currency": true,
+				"Validate Card Type": true,
+				"Validate Email": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Amount": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Currency": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Card Type": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Email": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				686
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"Validate Amount": true,
+					"Validate Currency": true,
+					"Validate Card Type": true,
+					"Validate Email": true
+				}
+			]
+		},
+		{
+			"id": "492eda22-1d1d-442e-a9f0-bbeb618ef1c9",
+			"name": "GetSpecificPayment",
+			"url": "https://connect.squareupsandbox.com/v2/payments/BIEwc6IAxLrSvexoLmjDnZFTQPLZY",
+			"time": 125,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"PaymentID is Correct": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PaymentID is Correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				125
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"PaymentID is Correct": true
+				}
+			]
+		},
+		{
+			"id": "994acf92-bb3e-4cce-a37c-488b9407b5af",
+			"name": "CratePayment_CASH",
+			"url": "https://connect.squareupsandbox.com/v2/payments",
+			"time": 114,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response Code": true,
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"Validate Error Details": true,
+				"Validate Error Category": true
+			},
+			"testPassFailCounts": {
+				"Response Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Details": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Category": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Response Code": true,
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"Validate Error Details": true,
+					"Validate Error Category": true
+				}
+			]
+		},
+		{
+			"id": "a0ce8afe-35a0-460d-86d1-4ecc2b8d7935",
+			"name": "AddTipToPayment",
+			"url": "https://connect.squareupsandbox.com/v2/payments/BIEwc6IAxLrSvexoLmjDnZFTQPLZY",
+			"time": 175,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"PaymentID is Correct": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PaymentID is Correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				175
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"PaymentID is Correct": true
+				}
+			]
+		},
+		{
+			"id": "f1654232-1f55-44cb-b2ce-d0428051993e",
+			"name": "CancelNonExistingPayment",
+			"url": "https://connect.squareupsandbox.com/v2/payments/BIEwc6IAxLrSvexoLmjDnZFTQPLZY2/cancel",
+			"time": 212,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"Validate Error Code": true,
+				"Validate Error Details": true,
+				"Validate Error Category": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Details": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Category": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				212
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"Validate Error Code": true,
+					"Validate Error Details": true,
+					"Validate Error Category": true
+				}
+			]
+		},
+		{
+			"id": "6683a066-d806-451b-a876-c1bca06f6396",
+			"name": "CompletePayment",
+			"url": "https://connect.squareupsandbox.com/v2/payments/BIEwc6IAxLrSvexoLmjDnZFTQPLZY/complete",
+			"time": 176,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				176
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true
+				}
+			]
+		},
+		{
+			"id": "9ec4324b-adda-43dd-b9b6-a868b0142d58",
+			"name": "HighRefundPayment",
+			"url": "https://connect.squareupsandbox.com/v2/refunds",
+			"time": 121,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"Validate Error Code": true,
+				"Validate Error Details": true,
+				"Validate Error Category": true,
+				"Validate Error Field": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Details": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Category": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Error Field": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"Validate Error Code": true,
+					"Validate Error Details": true,
+					"Validate Error Category": true,
+					"Validate Error Field": true
+				}
+			]
+		},
+		{
+			"id": "c1f6a908-7679-4d7a-877e-8798881a4333",
+			"name": "RefundPayment",
+			"url": "https://connect.squareupsandbox.com/v2/refunds",
+			"time": 1146,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Status": true,
+				"Response time is less than 1s": true,
+				"Validate Status": true,
+				"Validate Json Schema": true
+			},
+			"testPassFailCounts": {
+				"Response Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1s": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate Json Schema": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1146
+			],
+			"allTests": [
+				{
+					"Response Status": true,
+					"Response time is less than 1s": true,
+					"Validate Status": true,
+					"Validate Json Schema": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2755,
+	"collection": {
+		"requests": [
+			{
+				"id": "8b8611b5-458c-4ae3-91d6-fe534d6f58c0",
+				"method": "POST"
+			},
+			{
+				"id": "492eda22-1d1d-442e-a9f0-bbeb618ef1c9",
+				"method": "GET"
+			},
+			{
+				"id": "994acf92-bb3e-4cce-a37c-488b9407b5af",
+				"method": "POST"
+			},
+			{
+				"id": "a0ce8afe-35a0-460d-86d1-4ecc2b8d7935",
+				"method": "PUT"
+			},
+			{
+				"id": "f1654232-1f55-44cb-b2ce-d0428051993e",
+				"method": "POST"
+			},
+			{
+				"id": "6683a066-d806-451b-a876-c1bca06f6396",
+				"method": "POST"
+			},
+			{
+				"id": "9ec4324b-adda-43dd-b9b6-a868b0142d58",
+				"method": "POST"
+			},
+			{
+				"id": "c1f6a908-7679-4d7a-877e-8798881a4333",
+				"method": "POST"
+			}
+		]
+	}
+}
